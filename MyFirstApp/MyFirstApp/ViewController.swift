@@ -20,9 +20,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
-    @IBOutlet weak var textHello: UITextField!
+    @IBOutlet weak var textViewApiRetVal: UITextView!
+    
     @IBOutlet weak var buttonTest: UIButton!
+    
     @IBAction func clickButtonTest(_ sender: AnyObject) {
         let date = Date();
         let formatter = DateFormatter();
@@ -34,7 +35,9 @@ class ViewController: UIViewController {
         request.httpMethod = "GET"
         
         NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue.main) {(response, data, error) in
-            self.textHello.text = String(data: data!, encoding: .utf8 )
+            if let apiRetData = data {
+                self.textViewApiRetVal.text = String(data: apiRetData, encoding: .utf8 )
+            }
         }
     }
 }
