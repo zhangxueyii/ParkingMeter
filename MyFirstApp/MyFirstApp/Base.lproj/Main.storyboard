@@ -18,26 +18,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i40-S8-Za5" colorLabel="IBBuiltInLabel-Blue">
-                                <rect key="frame" x="120" y="349" width="135" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i40-S8-Za5" customClass="DesignableButton" customModule="MyFirstApp" customModuleProvider="target" colorLabel="IBBuiltInLabel-Blue">
+                                <rect key="frame" x="137.5" y="283.5" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="GGQ-Ga-yzC"/>
+                                    <constraint firstAttribute="width" constant="100" id="Njh-5b-d28"/>
+                                    <constraint firstAttribute="height" constant="100" id="Oa2-1f-HdW"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="Rk4-4F-muw"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="100" id="kwv-Wv-fPZ"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="nO1-CL-RME"/>
+                                </constraints>
                                 <size key="titleShadowOffset" width="3" height="1"/>
                                 <state key="normal" title="Park">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                    <color key="titleShadowColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    <color key="titleColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                        <color key="value" red="0.1936257382012079" green="0.69357189119170992" blue="0.24356510440615234" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="50"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="clickButtonTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Tg-DH-IWu"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="C1w-6u-CBM">
-                                <rect key="frame" x="67" y="259" width="240" height="59"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="C1w-6u-CBM">
+                                <rect key="frame" x="67" y="420" width="240" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -45,6 +56,12 @@
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="i40-S8-Za5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1if-y0-iJN"/>
+                            <constraint firstItem="i40-S8-Za5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EkP-ze-VZ1"/>
+                            <constraint firstItem="i40-S8-Za5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KLb-Cw-j2k"/>
+                            <constraint firstItem="i40-S8-Za5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="q3F-BU-zOj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
