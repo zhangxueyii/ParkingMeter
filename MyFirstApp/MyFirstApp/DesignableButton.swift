@@ -15,7 +15,7 @@ class DesignableButton: UIButton {
     @IBInspectable var cornerRadius : CGFloat = 0
     
     override func draw(_ rect: CGRect) {
-        layer.cornerRadius = 0
+        layer.cornerRadius = 75;
         layer.backgroundColor = fillColor.cgColor
     }
 }
