@@ -27,16 +27,20 @@ class ViewController: UIViewController {
     @IBAction func clickButtonTest(_ sender: AnyObject) {
         let date = Date();
         let formatter = DateFormatter();
-        formatter.dateFormat = "yyyy-MM-dd_HH:mm:ss-ZZZ";
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss";
         let defaultTimeZoneTimeStamp = formatter.string(from: date);
-        let url = URL(string: "http://ec2-18-222-142-104.us-east-2.compute.amazonaws.com:8080/demo4/beginPark?timeStamp=" + (defaultTimeZoneTimeStamp) )
         
-        var request = URLRequest(url: url!)
-        request.httpMethod = "GET"
-        
-        NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue.main) {(response, data, error) in
-            if let apiRetData = data {
-                self.textViewApiRetVal.text = String(data: apiRetData, encoding: .utf8 )
+        if let time = defaultTimeZoneTimeStamp.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
+        {
+            let url = URL(string: MyConstants.ApiBase + "beginPark?timeStamp=" + time );
+            
+            var request = URLRequest(url: url! )
+            request.httpMethod = "GET"
+            
+            NSURLConnection.sendAsynchronousRequest(request, queue: OperationQueue.main) {(response, data, error) in
+                if let apiRetData = data {
+                    self.textViewApiRetVal.text = String(data: apiRetData, encoding: .utf8 )
+                }
             }
         }
     }
