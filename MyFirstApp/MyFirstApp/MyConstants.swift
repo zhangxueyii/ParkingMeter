@@ -11,4 +11,10 @@ import Foundation
 struct MyConstants {
     static let ApiBase = "http://ec2-18-222-142-104.us-east-2.compute.amazonaws.com:8080/demo4/"
 //    static let ApiBase = "http://localhost:9990/"
+    
+    static let BeginParkAPI = "beginPark"
+    
+    static let EndParkAPI = "endPark"
+    
+    static let UniqueIdKey = "lastUniqueId"
 }

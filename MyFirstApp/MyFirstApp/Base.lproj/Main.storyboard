@@ -19,17 +19,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="C1w-6u-CBM">
-                                <rect key="frame" x="67" y="441" width="240" height="59"/>
+                                <rect key="frame" x="67" y="551" width="240" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i40-S8-Za5" customClass="DesignableButton" customModule="MyFirstApp" customModuleProvider="target" colorLabel="IBBuiltInLabel-Blue">
-                                <rect key="frame" x="112.5" y="258.5" width="150" height="150"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i40-S8-Za5" customClass="DesignableButton" customModule="MyFirstApp" customModuleProvider="target" colorLabel="IBBuiltInLabel-Blue">
+                                <rect key="frame" x="112.5" y="258.5" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="Njh-5b-d28"/>
-                                    <constraint firstAttribute="height" constant="150" id="Oa2-1f-HdW"/>
+                                    <constraint firstAttribute="width" constant="200" id="Njh-5b-d28"/>
+                                    <constraint firstAttribute="height" constant="200" id="Oa2-1f-HdW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <size key="titleShadowOffset" width="3" height="1"/>
@@ -51,11 +51,16 @@
                                     <action selector="clickButtonTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1Tg-DH-IWu"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IuQ-0z-70e">
+                                <rect key="frame" x="18" y="180" width="338" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="i40-S8-Za5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="6pS-2Z-FQe"/>
-                            <constraint firstItem="i40-S8-Za5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7pm-xy-Pxi"/>
                             <constraint firstItem="i40-S8-Za5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FbZ-dC-e38"/>
                             <constraint firstItem="i40-S8-Za5" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vKm-Dq-ICt"/>
                         </constraints>
@@ -63,6 +68,7 @@
                     </view>
                     <connections>
                         <outlet property="buttonTest" destination="i40-S8-Za5" id="IXH-xW-Kbq"/>
+                        <outlet property="textFieldTip" destination="IuQ-0z-70e" id="Amh-aQ-flJ"/>
                         <outlet property="textViewApiRetVal" destination="C1w-6u-CBM" id="h1l-Bn-gb6"/>
                     </connections>
                 </viewController>
