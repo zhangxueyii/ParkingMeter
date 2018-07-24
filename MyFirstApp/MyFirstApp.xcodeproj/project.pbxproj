@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C01EAF9210709060021BC3A /* LastParkingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C01EAF8210709060021BC3A /* LastParkingResponse.swift */; };
+		6C01EAFB210709690021BC3A /* ParkingInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C01EAFA210709690021BC3A /* ParkingInfo.swift */; };
 		6C2FE82B20F6058500B19412 /* DesignableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2FE82A20F6058500B19412 /* DesignableButton.swift */; };
 		6C2FE82D2101E87300B19412 /* MyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2FE82C2101E87300B19412 /* MyConstants.swift */; };
 		6C2FE82F2105B2C400B19412 /* BeginParkingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C2FE82E2105B2C400B19412 /* BeginParkingResponse.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C01EAF8210709060021BC3A /* LastParkingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastParkingResponse.swift; sourceTree = "<group>"; };
+		6C01EAFA210709690021BC3A /* ParkingInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingInfo.swift; sourceTree = "<group>"; };
 		6C2FE82A20F6058500B19412 /* DesignableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableButton.swift; sourceTree = "<group>"; };
 		6C2FE82C2101E87300B19412 /* MyConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyConstants.swift; sourceTree = "<group>"; };
 		6C2FE82E2105B2C400B19412 /* BeginParkingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeginParkingResponse.swift; sourceTree = "<group>"; };
@@ -115,6 +119,8 @@
 				6C2FE82C2101E87300B19412 /* MyConstants.swift */,
 				6C2FE82E2105B2C400B19412 /* BeginParkingResponse.swift */,
 				6C2FE8302105B36300B19412 /* EndParkingResponse.swift */,
+				6C01EAF8210709060021BC3A /* LastParkingResponse.swift */,
+				6C01EAFA210709690021BC3A /* ParkingInfo.swift */,
 			);
 			path = MyFirstApp;
 			sourceTree = "<group>";
@@ -273,7 +279,9 @@
 			files = (
 				6C712BAE20EE1D5700B611F9 /* ViewController.swift in Sources */,
 				6C712BAC20EE1D5700B611F9 /* AppDelegate.swift in Sources */,
+				6C01EAF9210709060021BC3A /* LastParkingResponse.swift in Sources */,
 				6C2FE82B20F6058500B19412 /* DesignableButton.swift in Sources */,
+				6C01EAFB210709690021BC3A /* ParkingInfo.swift in Sources */,
 				6C2FE8312105B36300B19412 /* EndParkingResponse.swift in Sources */,
 				6C2FE82F2105B2C400B19412 /* BeginParkingResponse.swift in Sources */,
 				6C2FE82D2101E87300B19412 /* MyConstants.swift in Sources */,

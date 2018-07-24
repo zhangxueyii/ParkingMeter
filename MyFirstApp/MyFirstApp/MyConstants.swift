@@ -12,8 +12,8 @@ struct MyConstants {
     static let ApiBase = "http://localhost:9990/"
     
     static let BeginParkAPI = "beginPark"
-    
     static let EndParkAPI = "endPark"
-    
+    static let LastParkAPI = "getLastParking"
+
     static let UniqueIdKey = "lastUniqueId"
 }
