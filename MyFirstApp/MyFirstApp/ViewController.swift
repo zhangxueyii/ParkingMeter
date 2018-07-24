@@ -94,13 +94,12 @@ class ViewController: UIViewController {
                     self.buttonTest.setTitle( "Park", for: UIControlState.normal)
                     UserDefaults.standard.removeObject(forKey: MyConstants.UniqueIdKey) // Clear the uniqueId
                     
-                    if let lastParkingResponse = self.getLastParkingInfo()
-                    {
+                    self.getLastParkingInfo(completionHandler: { ( lastParkingResponse ) in
                         if ( lastParkingResponse.successful )
                         {
-                            self.textFieldTip.text = "Parked Duration: " + self.getDateDiffForDisplay(from: lastParkingResponse.beginTime, to: lastParkingResponse.endTime)
+                            self.textFieldTip.text = "Last Parking Duration: " + self.getDateDiffForDisplay(from: lastParkingResponse.beginTime, to: lastParkingResponse.endTime)
                         }
-                    }
+                    })
                 }
             }
             else
@@ -130,8 +129,7 @@ class ViewController: UIViewController {
         return defaultTimeZoneTimeStamp
     }
     
-    func getLastParkingInfo() -> LastParkingResponse? {
-        var result : LastParkingResponse?
+    func getLastParkingInfo( completionHandler handler: @escaping (_ lastparking: LastParkingResponse ) -> Swift.Void ) {
         let url = URL(string: MyConstants.ApiBase + MyConstants.LastParkAPI);
         
         var request = URLRequest(url: url! )
@@ -145,24 +143,18 @@ class ViewController: UIViewController {
                 let json = respString.data(using: .utf8)!
                 let decoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .iso8601
-
+                
                 do {
                     let lastParkingResponse = try decoder.decode( LastParkingResponse.self, from: json)
-                    result = lastParkingResponse
+                    handler( lastParkingResponse )
                 }
                 catch
                 {
                     print(error)
                 }
             }
-            else
-            {
-                result = nil
-            }
         }
-        
-        return result
-    }
+}
     
     func getDateDiffForDisplay( from date1: Date?, to date2: Date? ) -> String {
         
@@ -171,8 +163,8 @@ class ViewController: UIViewController {
             return ""
         }
         
-        let difference = Calendar.current.dateComponents([.hour, .minute], from: date1!, to: date2!)
-        let formattedString = String(format: "%02ld%02ld", difference.hour!, difference.minute!)
+        let difference = Calendar.current.dateComponents([.hour, .minute, .second], from: date1!, to: date2!)
+        let formattedString = String(format: "%02ld Hr %02ld Min %02ld Sec", difference.hour!, difference.minute!, difference.second!)
         return formattedString
     }
 }

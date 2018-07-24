@@ -12,7 +12,6 @@ struct LastParkingResponse : Codable {
     let successful: Bool
     let message: String?
     let unique_id: String?
-    let beginTime: Date
+    let beginTime: Date?
     let endTime: Date?
-    let isDel: Bool
 }
